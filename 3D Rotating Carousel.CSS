@@ -1,0 +1,45 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+background-color: #000f25;
+display: flex;
+justify-content: center;
+align-items: center;
+perspective: 1000px;
+overflow: hidden;
+}
+.carousel {
+position: relative;
+transform-style: preserve-3d;
+animation: rotate 10s infinite linear;
+}
+@keyframes rotate {
+from {
+transform: rotateY(0deg);
+}
+to {
+transform: rotateY(360deg);
+}
+}
+.c-item {
+position: absolute;
+width: 100px;
+height: 100px;
+background-color: #0aff9d;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+font-weight: bold;
+color: #0d1117;
+box-shadow: 0 0 20px #00ff9dcc;
+transition: transform 0.5s;
+}
+.c-item:hover {
+transform: scale(1.3);
+}
